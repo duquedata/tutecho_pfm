@@ -15,7 +15,7 @@ num_hab = st.slider("Numero de habitaciones", 1, 10, 1)
 alquiler = st.slider("Alquiler a pagar €", 1, 3000, 0)
 
 indices = np.linspace(0, 1, num_points)
-theta = 2 * np.pi * num_turns * indices
+theta = 2 * np.pi * num_hab * indices
 radius = indices
 
 x = radius * np.cos(theta)
@@ -25,7 +25,7 @@ df = pd.DataFrame({
     "x": x,
     "y": y,
     "idx": indices,
-    "rand": np.random.randn(num_points),
+    "rand": np.random.randn(alquiler),
 })
 
 st.altair_chart(alt.Chart(df, height=700, width=700)
