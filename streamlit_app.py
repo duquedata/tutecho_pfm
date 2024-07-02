@@ -3,6 +3,15 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+
+st.set_page_config(
+    page_title="Hola. ¿Qué tipo de vivienda necesitamos hoy?",
+    page_icon="👋",
+)
+
+st.write("# Bienvenido a Tutecho Search. La herramienta de búsqueda de Idealista 👋")
+
+st.sidebar.success("Define tu búsqueda.")
 """
 # Encuentra hoy qué hay en Idealista para Tutecho!
 
@@ -14,28 +23,25 @@ Te mostramos los pisos que se ajustan más lo que nos has pedido.
 num_hab = st.slider("Numero de habitaciones", 1, 10, 1)
 alquiler = st.slider("Alquiler a pagar €", 1, 3000, 0)
 
-indices = np.linspace(0, 1, num_points)
-theta = 2 * np.pi * num_hab * indices
-radius = indices
 
-x = radius * np.cos(theta)
-y = radius * np.sin(theta)
 
-df = pd.DataFrame({
-    "x": x,
-    "y": y,
-    "idx": indices,
-    "rand": np.random.randn(alquiler),
-})
-
-st.altair_chart(alt.Chart(df, height=700, width=700)
-    .mark_point(filled=True)
-    .encode(
-        x=alt.X("x", axis=None),
-        y=alt.Y("y", axis=None),
-        color=alt.Color("idx", legend=None, scale=alt.Scale()),
-        size=alt.Size("rand", legend=None, scale=alt.Scale(range=[1, 150])),
-    ))
+st.markdown(
+    """
+    Streamlit is an open-source app framework built specifically for
+    Machine Learning and Data Science projects.
+    **👈 Select a demo from the sidebar** to see some examples
+    of what Streamlit can do!
+    ### Want to learn more?
+    - Check out [streamlit.io](https://streamlit.io)
+    - Jump into our [documentation](https://docs.streamlit.io)
+    - Ask a question in our [community
+        forums](https://discuss.streamlit.io)
+    ### See more complex demos
+    - Use a neural net to [analyze the Udacity Self-driving Car Image
+        Dataset](https://github.com/streamlit/demo-self-driving)
+    - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
+"""
+)
 
 """
 Tenemos estos pisos disponibles
