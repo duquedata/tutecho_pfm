@@ -1,8 +1,11 @@
-# 🌀 Spiral template
+# TU TECHO TFM
 
-A simple Streamlit app that draws a spiral. 
+Proyecto final de master "Data Science en The Valley"
+Buscador de pisos en Idealista para encontrar oportunidades que puedan interesar a la SOCIMI
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://basic-template.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://tutechopfm.streamlit.app/)
+
+https://tutechopfm.streamlit.app/
 
 ### How to run it on your own machine
 
