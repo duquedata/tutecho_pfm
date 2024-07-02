@@ -6,11 +6,9 @@ import streamlit as st
 """
 # Encuentra hoy qué hay en Idealista para Tutecho!
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+Dinos el número de habitaciones que necesitas, la zona y el alquiler máximo que se podría pagar.
 
-In the meantime, below is an example of what you can do with just a few lines of code:
+Te mostramos los pisos que se ajustan más lo que nos has pedido.
 """
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
